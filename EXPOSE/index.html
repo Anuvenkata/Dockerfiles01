@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docker + Nginx Running</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px 60px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        h1 {
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>✅ Nginx is Running!</h1>
+        <p>Your Docker container is working successfully.</p>
+        <p><b>Server:</b> EC2 Instance</p>
+        <p><b>Time:</b> <span id="time"></span></p>
+        <div class="footer">Powered by Docker & Nginx</div>
+    </div>
+
+    <script>
+        document.getElementById("time").innerHTML = new Date().toLocaleString();
+    </script>
+</body>
+</html>
